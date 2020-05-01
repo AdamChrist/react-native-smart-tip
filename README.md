@@ -4,6 +4,10 @@ React-native smart tip, including Toast、Modal、SnackBar
 ![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)
 [![npm](https://img.shields.io/npm/v/react-native-smart-tip.svg?style=flat)](https://npmjs.com/package/react-native-smart-tip)
 
+### 2020.5 
+1. Add property isShowShadow to WSnackBar and WToast
+2. Add sliding hide function for WSnackBar
+
 ### 2020.3 Show Toast above Modal (Compatible with Android and iOS)
 
 ![](https://user-gold-cdn.xitu.io/2020/3/8/170b855830588e41?w=300&h=500&f=gif&s=489177)
@@ -43,7 +47,7 @@ npm i react-native-smart-tip --save
 ![](https://github.com/mochixuan/react-native-smart-tip/blob/master/img/toast.gif?raw=true)
 
 ##### SnackBar
-![](https://github.com/mochixuan/react-native-smart-tip/blob/master/img/snackbar.gif?raw=true)
+![](https://user-gold-cdn.xitu.io/2020/4/30/171c959272abe458?w=320&h=533&f=gif&s=355190)
 
 ##### Modal
 ![](https://github.com/mochixuan/react-native-smart-tip/blob/master/img/modal.gif?raw=true)
@@ -89,7 +93,7 @@ inEasing | Easing   | false  | Easing.elastic(1)| Admission animation
 textColor| String | false |'white'| font color
 backgroundColor| String | false | 'black' | background color
 icon | Component | fasse | undefined | Image to be displayed
-
+isShowShadow | boolean | false | true | Shadow effect
 ---
 
 ##### WSnackBar
@@ -111,7 +115,7 @@ show = () => {
 	    backgroundColor: '#050405',
 	    actionText: 'Sure',
 	    actionTextColor: '#ff490b',
-	    actionClick: ()=>{
+	    onActionHide: (isSlideHide)=>{
 	    	// Click Action
 	    },
 	}
@@ -134,8 +138,9 @@ textColor| String | false |'white'| font color
 backgroundColor| String | false | 'black' | background color
 actionText | String | false | undefined | action text
 actionTextColor | String | false | 'white' | action text color
-actionClick | Function | false |  undefined | listener click
-
+isAllowSlideExit|boolean | false | true | Whether to run sliding hide
+onActionHide | Function | false |  undefined | listener click
+isShowShadow | boolean | false | true | Shadow effect
 ---
 
 ##### WModal 
